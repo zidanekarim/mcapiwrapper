@@ -38,7 +38,7 @@ object.stats()
 print(object.wins) #prints bedwars wins for ThePotatoPowers
 ```
 
-##Skins
+## Skins
 
 Create a **skin object** by first importing the skin file from the package `from mcapiwrapper import skin`
 The class takes a username argument
@@ -70,7 +70,7 @@ After the `stats` method is run, you can access all attributes of the Bedwars ob
 - winstreak
 - level
 
-##Skywars
+## Skywars
 
 As shown above, import hypixel from mcapiwrapper. Then, create a `Skywars` object which takes a username and apikey parameter (in that order)
 
@@ -86,7 +86,7 @@ After the `stats` method is run, you can access all attributes of the Skywars ob
 - winstreak
 - display
 
-##Hypixel
+## Hypixel
 
 As shown above, import hypixel from mcapiwrapper. Then, create a `Hypixel` object which takes a username and apikey parameter (in that order)
 
@@ -97,15 +97,15 @@ After the `stats` method is run, you can access all attributes of the Hypixel ob
 - nameHistory
 - display
 
-##Contribute
+## Contribute
 
 - Issue Tracker: https://github.com/ThePotatoPowers/mcapiwrapper
 - Source Code: https://github.com/ThePotatoPowers/mcapiwrapper/issues
 
-##Support
+## Support
 
 If you are having issues, please let me know @ zkarim7676@gmail.com
 
-##License
+## License
 
 The project is licensed under the MSI license.
