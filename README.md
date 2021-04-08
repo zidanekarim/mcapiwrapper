@@ -20,7 +20,7 @@ from mcapiwrapper import hypixel
 
 The second way allows you to save some lines writing the actual code. To actually use this, create a Bedwars, Skywars, or Hypixel object. You must pass in a username and api key for the hypixel-related objects
 
-****Example****
+\***\*Example\*\***
 
 ```py
 from mcapiwrapper import hypixel
@@ -51,7 +51,7 @@ The `head` method will return a link with the user's head. You can access this w
 
 The `avatar` method will return a link with the user's head in 2D. You can access this with the avatar attribute
 
-##Bedwars
+## Bedwars
 
 As shown above, import hypixel from mcapiwrapper. Then, create a `Bedwars` object which takes a username and apikey parameter (in that order)
 
@@ -99,8 +99,8 @@ After the `stats` method is run, you can access all attributes of the Hypixel ob
 
 ## Contribute
 
-- Issue Tracker: https://github.com/ThePotatoPowers/mcapiwrapper
-- Source Code: https://github.com/ThePotatoPowers/mcapiwrapper/issues
+- Source Code: https://github.com/ThePotatoPowers/mcapiwrapper/
+- Issue Tracker: https://github.com/ThePotatoPowers/mcapiwrapper/issues
 
 ## Support
 
@@ -108,4 +108,4 @@ If you are having issues, please let me know @ zkarim7676@gmail.com
 
 ## License
 
-The project is licensed under the MSI license.
+The project is licensed under the MIT license.
