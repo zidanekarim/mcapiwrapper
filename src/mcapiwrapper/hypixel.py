@@ -1,5 +1,6 @@
 import json
 import requests
+import exceptions
 
 class Hypixel:
     "Hypixel Stats. Takes a username and api key"
@@ -9,12 +10,13 @@ class Hypixel:
 
 
     def stats(self):
-        data = requests.get(f"https://api.hypixel.net/player?key={self.api_key}&name={self.player}").json()
+        try:
+            data = requests.get(f"https://api.hypixel.net/player?key={self.api_key}&name={self.player}").json()
+        except:
+            raise exceptions.NotFound("Either api key invalid or player name invalid!")
         self.firstLogin = data["player"]["firstLogin"]
         self.lastLogin = data["player"]["lastLogin"]
         self.namehistory = data["player"]["knownAliases"]
-        self.firstLogin = data["player"]["firstLogin"]
-        self.lastLogin = data["player"]["lastLogin"]
         self.display = data["player"]["displayname"]
 
 
@@ -28,7 +30,13 @@ class Bedwars:
         self.apikey = apikey
 
     def stats(self):
-        data = requests.get(f"https://api.hypixel.net/player?key={self.apikey}&name={self.username}").json()
+        try:
+            data = requests.get(f"https://api.hypixel.net/player?key={self.api_key}&name={self.player}").json()
+        except:
+            raise exceptions.NotFound("Either api key invalid or player name invalid!")
+
+
+        self.display = data["player"]["displayname"]
         self.wins = data["player"]["achievements"]["bedwars_wins"]
         self.level = data["player"]["achievements"]["bedwars_level"]
         self.deaths = data["player"]["stats"]["Bedwars"]["deaths_bedwars"]
@@ -51,7 +59,12 @@ class Skywars:
         self.apikey = apikey
 
     def stats(self):
-        data = requests.get(f"https://api.hypixel.net/player?key={self.apikey}&name={self.username}").json()
+        try:
+            data = requests.get(f"https://api.hypixel.net/player?key={self.api_key}&name={self.player}").json()
+        except:
+            raise exceptions.NotFound("Either api key invalid or player name invalid!")
+
+        
         self.display = data["player"]["displayname"]
         self.coins = data["player"]["stats"]["SkyWars"]["coins"]
         self.kills = data["player"]["stats"]["SkyWars"]["kills"]
